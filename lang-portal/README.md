@@ -1,17 +1,17 @@
 ## Install
 
 ```sh
-command
+pip install -r requirements.txt
 ```
 
 ## Setup DB
 
 ```
-command
+invoke init-db
 ```
 
 ## Run
 
 ```sh
-command
+python app.py
 ```
