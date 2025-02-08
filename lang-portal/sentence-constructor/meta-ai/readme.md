@@ -3,9 +3,7 @@
 ### Model
 The Llama 3.2 has 3B parameters by default when run locally via Ollama.
 
-https://ollama.com/library/llama3.2
-
-https://huggingface.co/meta-llama/Llama-3.2-3B
+https://github.com/ollama/ollama
 
 
 ### Prompting Guides
