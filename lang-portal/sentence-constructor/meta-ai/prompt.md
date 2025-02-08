@@ -14,8 +14,6 @@ Beginner, A1, A2
 - You may provide a possible sentence structure.
 - You may optionally break down the sentence into smaller parts to assist with the translation, however, do not split them all into individual words to just list them out one by one.
 
-Student Input: Bears are at the door, did you leave the garbage out?
-
 
 ## Examples
 Examples of user input and assistant output:

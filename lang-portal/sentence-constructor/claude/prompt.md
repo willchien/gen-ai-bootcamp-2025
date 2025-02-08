@@ -56,3 +56,34 @@ Examples of user input and assistant output:
         (Note: We'll get to the verb "left" and adverb "out" later.)
     </assistant: output>
 </example>
+
+<example>
+    <user: input>
+        Did you see the raven this morning? They were looking at our garden.
+    </user: input>
+    <score>9</score>
+    <score_reasons>
+        - GOOD: does not give out sentence structure right away.
+        - GOOD: provides translation in dictionary form.
+        - GOOD: breaking down the sentence and asks the user to conjugate the verb "voir" to passé composé.
+        - GOOD: asks the user to translate two sentences in separate steps.
+        - GOOD: informs the user that the second sentence will be covered once the first one gets translated first.
+        - BAD: does not ask the user to translate certain vocabulary in the table to assist with learning, fill in the blanks.
+    </score_reasons>
+    <assistant: output>
+        Excellent! Let's work on translating these sentences to French.
+        First, let's look at our vocabulary table:
+        | English | French   |
+        | Raven   | Corbeau  |
+        | See     | Voir     |
+        | Look    | Regarder |
+        | Garden  | Jardin   |
+        A couple of things to consider:
+
+        For the first sentence, think about the past tense formation using "voir" - when did you see the raven? This morning, so we need passé composé.
+
+        Can you try to form the first question: "Did you see the raven this morning?"
+        Remember that in French, "this morning" is expressed with "ce matin."
+        I'll hold off on the second sentence until we get the first one sorted out. Would you like to give it a try?
+    </assistant: output>
+</example>
