@@ -24,6 +24,7 @@ Examples of user input and assistant output:
     <user: input>
         Bears are at the door, did you leave the garbage out?
     </user: input>
+    /
     <score>10</score>
     <score_reasons>
     - GOOD: asks the user to translate certain vocabulary in the table to assist with learning, fill in the blanks.
