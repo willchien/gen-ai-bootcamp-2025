@@ -2,15 +2,15 @@
 
 ## Pages
 
-### Dashboard /dashboard
+### Dashboard `/dashboard`
 Summary of learning and default landing page.
 
 #### Components
 - Last Study Session
-    - shows last activity used
-    - shows when last activity used
-    - summarizes wrong vs correct from last activity
-    - has a link to the group
+    - last activity used
+    - time of last activity used
+    - wrong vs correct from last activity
+    - link to the group
 
 - Study Progress
     - total words studied e.g. 3/124
@@ -26,15 +26,20 @@ Summary of learning and default landing page.
 - Start Studying Button
     - goes to study activities page
 
-##### API Endpoints
-- `GET /dashboard/last_study_session`
-- `GET /dashboard/study_progress`
-- `GET /dashboard/quick-stats`
-
-### Studies Activities /study-activities
-A collection of studies activities with a thumbnail and its name, to either launch or view the study activity.
-
 #### API Endpoints
 - `GET /dashboard/last_study_session`
 - `GET /dashboard/study_progress`
 - `GET /dashboard/quick-stats`
+
+### Studies Activities `/study-activities`
+A collection of studies activities with a thumbnail and its name, to either launch or view the study activity.
+
+#### Components
+- Study Activity Card
+    - thumbnail of the study activity
+    - the name of the study activity
+    - a launch button to take us to the launch page
+    - the view page to view more information about past study sessions for this study activity
+
+#### API Endpoints
+- `GET /study-activities`
