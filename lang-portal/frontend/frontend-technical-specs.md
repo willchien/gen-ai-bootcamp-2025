@@ -5,7 +5,7 @@
 ### Dashboard /dashboard
 Summary of learning and default landing page.
 
-This page contains the following components:
+#### Components
 - Last Study Session
     - shows last activity used
     - shows when last activity used
@@ -26,7 +26,7 @@ This page contains the following components:
 - Start Studying Button
     - goes to study activities page
 
-#### API Endpoints
+##### API Endpoints
 - `GET /dashboard/last_study_session`
 - `GET /dashboard/study_progress`
 - `GET /dashboard/quick-stats`
