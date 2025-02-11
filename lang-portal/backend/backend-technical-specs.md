@@ -14,7 +14,7 @@ A language learning school wants to build a prototype of learning portal which w
 
 ## Database Schema
 We have the following tables:
-- words (vocabulary)
+- words - vocabulary
     - id integer
     - French string
     - English string
@@ -33,7 +33,7 @@ We have the following tables:
     - id integer
     - study_session_id integer
     - group_id integer
-    - created at datetime
+    - created_at datetime
 
 - word_review_items - a record of word practice, determining if the word was correct or not 
     - word_id integer
@@ -45,9 +45,13 @@ We have the following tables:
     - id integer
     - group_id integer
     - study_activity_id integer
-    - created at datetime
+    - created_at datetime
 
-### API Endpoints
+## API Endpoints
+- `GET /dashboard/last_study_session`
+- `GET /dashboard/study_progress`
+- `GET /dashboard/quick-stats`
+
 - `GET /words` - Retrieve all words in the vocabulary.
 - `GET /words/:id` - Retrieve a specific word by ID.
 - `POST /words` - Add a new word to the vocabulary.
