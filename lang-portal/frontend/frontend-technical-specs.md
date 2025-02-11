@@ -27,9 +27,10 @@ Summary of learning and default landing page.
     - goes to study activities page
 
 #### API Endpoints
-- `GET /dashboard/last_study_session`
-- `GET /dashboard/study_progress`
-- `GET /dashboard/quick-stats`
+- `GET /api/dashboard/last_study_session`
+- `GET /api/dashboard/study_progress`
+- `GET /api/dashboard/quick-stats`
+
 
 ### Studies Activities `/study-activities`
 A collection of studies activities with a thumbnail and its name, to either launch or view the study activity.
@@ -42,4 +43,11 @@ A collection of studies activities with a thumbnail and its name, to either laun
     - the view page to view more information about past study sessions for this study activity
 
 #### API Endpoints
-- `GET /study-activities`
+- `GET /api/study-activities`
+
+
+### Studies Activity Show `/study-activities/:id`
+A collection of studies activities with a thumbnail and its name, to either launch or view the study activity.
+
+#### Components
+#### API Endpoints
