@@ -48,6 +48,9 @@ We have the following tables:
     - created_at datetime
 
 ## API Endpoints
+
+### `GET /api/dashboard/last_study_session`
+
 - `GET /api/dashboard/last_study_session`
 - `GET /api/dashboard/study_progress`
 - `GET /api/dashboard/quick_stats`
