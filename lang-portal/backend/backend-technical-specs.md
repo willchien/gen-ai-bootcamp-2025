@@ -48,36 +48,51 @@ We have the following tables:
     - created_at datetime
 
 ## API Endpoints
-- `GET /dashboard/last_study_session`
-- `GET /dashboard/study_progress`
-- `GET /dashboard/quick-stats`
+- `GET /api/dashboard/last_study_session`
+- `GET /api/dashboard/study_progress`
+- `GET /api/dashboard/quick_stats`
+- `GET /api/api/study_activities/:id`
+- `GET /api/api/study_activities/:id/study_sessions`
+- `POST /api/study_activities`
+    - required params: group_id, study_activity_id
+- `GET /api/words` 
+    - pagination with 100 items per page
+- `GET /api/words/:id` 
+<!-- - `POST /api/words` - Add a new word to the vocabulary.
+- `PUT /api/words/:id` - Update an existing word by ID.
+- `DELETE /api/words/:id` - Delete a word by ID. -->
 
-- `GET /words` - Retrieve all words in the vocabulary.
-- `GET /words/:id` - Retrieve a specific word by ID.
-- `POST /words` - Add a new word to the vocabulary.
-- `PUT /words/:id` - Update an existing word by ID.
-- `DELETE /words/:id` - Delete a word by ID.
+- `GET /api/groups` 
+    - pagination with 100 items per page
+- `GET /api/groups/:id` 
+- `GET /api/groups/:id/words`
+- `GET /api/groups/:id/study_sessions`
+- `GET /api/study_sessions`
+- `GET /api/study_sessions/:id`
+- `GET /api/study_sessions/:id/words`
+- `POST /api/reset_history`
+- `POST /api/full_reset`
+- `POST /api/study_sessions/:id/words/:word_id/review`
+    - required param: correct
 
-- `GET /groups` - Retrieve all groups.
-- `GET /groups/:id` - Retrieve a specific group by ID.
-- `POST /groups` - Add a new group.
-- `PUT /groups/:id` - Update an existing group by ID.
-- `DELETE /groups/:id` - Delete a group by ID.
+<!-- - `POST /api/groups` - Add a new group.
+- `PUT /api/groups/:id` - Update an existing group by ID.
+- `DELETE /api/groups/:id` - Delete a group by ID.
 
-- `GET /study_sessions` - Retrieve all study sessions.
-- `GET /study_sessions/:id` - Retrieve a specific study session by ID.
-- `POST /study_sessions` - Create a new study session.
-- `PUT /study_sessions/:id` - Update an existing study session by ID.
-- `DELETE /study_sessions/:id` - Delete a study session by ID.
+- `GET /api/study_sessions` - Retrieve all study sessions.
+- `GET /api/study_sessions/:id` - Retrieve a specific study session by ID.
+- `POST /api/study_sessions` - Create a new study session.
+- `PUT /api/study_sessions/:id` - Update an existing study session by ID.
+- `DELETE /api/study_sessions/:id` - Delete a study session by ID.
 
-- `GET /study_activities` - Retrieve all study activities.
-- `GET /study_activities/:id` - Retrieve a specific study activity by ID.
-- `POST /study_activities` - Create a new study activity.
-- `PUT /study_activities/:id` - Update an existing study activity by ID.
-- `DELETE /study_activities/:id` - Delete a study activity by ID.
+- `GET /api/study_activities` - Retrieve all study activities.
+- `GET /api/study_activities/:id` - Retrieve a specific study activity by ID.
+- `POST /api/study_activities` - Create a new study activity.
+- `PUT /api/study_activities/:id` - Update an existing study activity by ID.
+- `DELETE /api/study_activities/:id` - Delete a study activity by ID.
 
-- `GET /word_review_items` - Retrieve all word review items.
-- `GET /word_review_items/:id` - Retrieve a specific word review item by ID.
-- `POST /word_review_items` - Create a new word review item.
-- `PUT /word_review_items/:id` - Update an existing word review item by ID.
-- `DELETE /word_review_items/:id` - Delete a word review item by ID.
+- `GET /api/word_review_items` - Retrieve all word review items.
+- `GET /api/word_review_items/:id` - Retrieve a specific word review item by ID.
+- `POST /api/word_review_items` - Create a new word review item.
+- `PUT /api/word_review_items/:id` - Update an existing word review item by ID.
+- `DELETE /api/word_review_items/:id` - Delete a word review item by ID. -->
