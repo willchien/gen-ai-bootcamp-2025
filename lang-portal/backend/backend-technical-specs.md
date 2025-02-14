@@ -9,6 +9,7 @@ A language learning school wants to build a prototype of learning portal which w
 ## Technical Requirements
 - Backend: JS, Express.js
 - Database: SQLite3
+- Task runner: npm
 - The API will always return JSON
 - There's no authentication or authorization features, assume single user
 
@@ -123,13 +124,16 @@ Required params:
 - group_id integer 
 - study_activity_id integer
 #### JSON Response
+```json
+
 {
   "id": 124,
   "group_id": 123
 }
+```
 
 ### `GET /api/words` 
-Pagination list of words with 100 items per page, with review stats
+Pagination list of words with 100 items per page, with review stats.
 - page: Page number (default: 1)
 - sort_by: Sort field ('French', 'english', 'correct_count', 'wrong_count') (default: 'French')
 - order: Sort order ('asc' or 'desc') (default: 'asc')
@@ -173,7 +177,7 @@ Pagination list of words with 100 items per page, with review stats
 ```
 
 ### `GET /api/groups` 
-Pagination list of word groups with 100 items per page, with word counts
+Pagination list of word groups with 100 items per page, with word counts.
 #### JSON Response
 ```json
 {
@@ -194,7 +198,7 @@ Pagination list of word groups with 100 items per page, with word counts
 ```
 
 ### `GET /api/groups/:id` 
-Get words from a specific group (intended to be used by target apps)
+Get words from a specific group (intended to be used by target apps).
 - page: Page number (default: 1)
 - sort_by: Sort field ('name', 'words_count') (default: 'name')
 - order: Sort order ('asc' or 'desc') (default: 'asc')
@@ -254,7 +258,7 @@ Get words from a specific group (intended to be used by target apps)
 ```
 
 ### `GET /api/study_sessions`
-Pagination with 100 items per page
+Pagination with 100 items per page.
 #### JSON Response
 ```json
 {
@@ -291,7 +295,7 @@ Pagination with 100 items per page
 ```
 
 ### `GET /api/study_sessions/:id/words`
-Pagination with 100 items per page
+Pagination with 100 items per page.
 #### JSON Response
 ```json
 {
@@ -331,7 +335,7 @@ Pagination with 100 items per page
 ```
 
 ### `POST /api/study_sessions/:id/words/:word_id/review`
-Log a review attempt for a word during a study session
+Log a review attempt for a word during a study session.
 Required params: 
 - id (study_session_id) integer
 - word_id integer
@@ -359,7 +363,7 @@ Required params:
 Initialize the sqlite database called `words.db`.
 
 ### Migrate Database
-Run migration sql files on the database
+Run migration sql files on the database.
 Migrations live in the `migrations` folder.
 The migration files will be run in order of their file name.
 The file names should looks like this:
