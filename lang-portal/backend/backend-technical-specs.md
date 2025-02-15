@@ -13,6 +13,22 @@ A language learning school wants to build a prototype of learning portal which w
 - The API will always return JSON
 - There's no authentication or authorization features, assume single user
 
+## Directory Structure 
+```text
+backend/
+└── src/
+    ├── config/
+    ├── controllers/
+    ├── models/
+    ├── routes/
+    ├── database/
+    │   ├── migrations/
+    │   ├── seeds/
+    │   └── words.db
+    ├── app.js
+    └── server.js
+```
+
 ## Database Schema
 We have the following tables:
 - words - vocabulary
