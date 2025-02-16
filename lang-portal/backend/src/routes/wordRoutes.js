@@ -3,51 +3,93 @@ const router = express.Router();
 
 // Mock database
 let words = [
-  { id: 1, French: 'Bonjour', English: 'Hello', parts: { noun: true } },
-  { id: 2, French: 'Merci', English: 'Thank you', parts: { noun: true } }
+  { id: 1, french: 'bonjour', english: 'hello', correct_count: 5, wrong_count: 2, groups: [{ id: 1, name: 'Basic Greetings' }] },
+  { id: 2, french: 'merci', english: 'thank you', correct_count: 3, wrong_count: 1, groups: [{ id: 1, name: 'Basic Greetings' }] }
 ];
 
-// GET /words - Retrieve all words
+// GET /api/words - Retrieve all words with pagination
 router.get('/', (req, res) => {
-  res.json(words);
+  const page = parseInt(req.query.page) || 1;
+  const sort_by = req.query.sort_by || 'french';
+  const order = req.query.order || 'asc';
+  const items_per_page = 100;
+
+  // Mock pagination
+  const start = (page - 1) * items_per_page;
+  const end = start + items_per_page;
+  const items = words.slice(start, end).map(word => ({
+    french: word.french,
+    english: word.english,
+    correct_count: word.correct_count,
+    wrong_count: word.wrong_count
+  }));
+
+  res.json({
+    items,
+    pagination: {
+      current_page: page,
+      total_pages: Math.ceil(words.length / items_per_page),
+      total_items: words.length,
+      items_per_page
+    }
+  });
 });
 
-// GET /words/:id - Retrieve a specific word by ID
+// GET /api/words/:id - Retrieve a specific word by ID with stats
 router.get('/:id', (req, res) => {
   const word = words.find(w => w.id === parseInt(req.params.id));
   if (word) {
-    res.json(word);
+    res.json({
+      french: word.french,
+      english: word.english,
+      stats: {
+        correct_count: word.correct_count,
+        wrong_count: word.wrong_count
+      },
+      groups: word.groups
+    });
   } else {
     res.status(404).send('Word not found');
   }
 });
 
-// POST /words - Add a new word
+// POST /api/words - Add a new word
 router.post('/', (req, res) => {
+  const { french, english } = req.body;
+  
+  if (!french || !english) {
+    return res.status(400).json({ error: 'French and English translations are required' });
+  }
+  
   const newWord = {
     id: words.length + 1,
-    French: req.body.French,
-    English: req.body.English,
-    parts: req.body.parts
+    french,
+    english,
+    correct_count: 0,
+    wrong_count: 0,
+    groups: req.body.groups || []
   };
+  
   words.push(newWord);
   res.status(201).json(newWord);
 });
 
-// PUT /words/:id - Update an existing word
+// PUT /api/words/:id - Update an existing word
 router.put('/:id', (req, res) => {
   const word = words.find(w => w.id === parseInt(req.params.id));
   if (word) {
-    word.French = req.body.French;
-    word.English = req.body.English;
-    word.parts = req.body.parts;
+    word.french = req.body.french;
+    word.english = req.body.english;
+    word.correct_count = req.body.correct_count;
+    word.wrong_count = req.body.wrong_count;
+    word.groups = req.body.groups;
     res.json(word);
   } else {
     res.status(404).send('Word not found');
   }
 });
 
-// DELETE /words/:id - Delete a word
+// DELETE /api/words/:id - Delete a word
 router.delete('/:id', (req, res) => {
   const wordIndex = words.findIndex(w => w.id === parseInt(req.params.id));
   if (wordIndex !== -1) {
