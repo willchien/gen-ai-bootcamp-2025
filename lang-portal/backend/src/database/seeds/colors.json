@@ -1,0 +1,17 @@
+[
+  {
+    "french": "rouge",
+    "english": "red",
+    "parts": { "type": "adjective", "category": "color" }
+  },
+  {
+    "french": "bleu",
+    "english": "blue",
+    "parts": { "type": "adjective", "category": "color" }
+  },
+  {
+    "french": "vert",
+    "english": "green",
+    "parts": { "type": "adjective", "category": "color" }
+  }
+]

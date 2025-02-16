@@ -1,0 +1,17 @@
+[
+  {
+    "french": "un",
+    "english": "one",
+    "parts": { "type": "number", "category": "cardinal" }
+  },
+  {
+    "french": "deux",
+    "english": "two",
+    "parts": { "type": "number", "category": "cardinal" }
+  },
+  {
+    "french": "trois",
+    "english": "three",
+    "parts": { "type": "number", "category": "cardinal" }
+  }
+]

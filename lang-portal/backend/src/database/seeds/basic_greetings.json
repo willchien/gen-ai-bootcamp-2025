@@ -1,0 +1,17 @@
+[
+  {
+    "french": "bonjour",
+    "english": "hello",
+    "parts": { "type": "expression", "usage": "formal" }
+  },
+  {
+    "french": "au revoir",
+    "english": "goodbye",
+    "parts": { "type": "expression", "usage": "formal" }
+  },
+  {
+    "french": "salut",
+    "english": "hi",
+    "parts": { "type": "expression", "usage": "informal" }
+  }
+]

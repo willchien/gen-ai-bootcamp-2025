@@ -1,0 +1,17 @@
+[
+  {
+    "french": "être",
+    "english": "to be",
+    "parts": { "type": "verb", "group": "irregular" }
+  },
+  {
+    "french": "avoir",
+    "english": "to have",
+    "parts": { "type": "verb", "group": "irregular" }
+  },
+  {
+    "french": "aller",
+    "english": "to go",
+    "parts": { "type": "verb", "group": "irregular" }
+  }
+]

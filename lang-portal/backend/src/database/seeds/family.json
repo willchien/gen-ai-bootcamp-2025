@@ -1,0 +1,17 @@
+[
+  {
+    "french": "mère",
+    "english": "mother",
+    "parts": { "type": "noun", "category": "family" }
+  },
+  {
+    "french": "père",
+    "english": "father",
+    "parts": { "type": "noun", "category": "family" }
+  },
+  {
+    "french": "soeur",
+    "english": "sister",
+    "parts": { "type": "noun", "category": "family" }
+  }
+]
