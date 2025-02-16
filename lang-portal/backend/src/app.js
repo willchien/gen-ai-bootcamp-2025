@@ -7,6 +7,9 @@ const wordReviewItemRoutes = require('./routes/wordReviewItemRoutes');
 const studySessionRoutes = require('./routes/studySessionRoutes');
 const studyActivityRoutes = require('./routes/studyActivityRoutes');
 const groupRoutes = require('./routes/groupRoutes');
+const dashboardRoutes = require('./routes/dashboardRoutes');
+const wordRoutes = require('./routes/wordRoutes');
+const systemRoutes = require('./routes/systemRoutes');
 
 const app = express();
 
@@ -19,6 +22,9 @@ app.use('/api/word-review-items', wordReviewItemRoutes);
 app.use('/api/study-sessions', studySessionRoutes);
 app.use('/api/study-activities', studyActivityRoutes);
 app.use('/api/groups', groupRoutes);
+app.use('/api/dashboard', dashboardRoutes);
+app.use('/api/words', wordRoutes);
+app.use('/api/system', systemRoutes);
 
 // Health check endpoint
 app.get('/health', (req, res) => {

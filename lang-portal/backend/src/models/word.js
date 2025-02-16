@@ -17,7 +17,7 @@ const Word = {
       console.error('Error in findAll:', error);
       throw new Error('Database error');
     }
-  },
+  },x``
 
   findById: async (id) => {
     try {
