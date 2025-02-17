@@ -6,6 +6,11 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { AppLayout } from "./components/layout/AppLayout";
 import Dashboard from "./pages/Dashboard";
+import StudyActivities from "./pages/StudyActivities";
+import Words from "./pages/Words";
+import Groups from "./pages/Groups";
+import StudySessions from "./pages/StudySessions";
+import Settings from "./pages/Settings";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,7 +31,46 @@ const App = () => (
               </AppLayout>
             }
           />
-          {/* Add routes for other pages here */}
+          <Route
+            path="/study_activities"
+            element={
+              <AppLayout>
+                <StudyActivities />
+              </AppLayout>
+            }
+          />
+          <Route
+            path="/words"
+            element={
+              <AppLayout>
+                <Words />
+              </AppLayout>
+            }
+          />
+          <Route
+            path="/groups"
+            element={
+              <AppLayout>
+                <Groups />
+              </AppLayout>
+            }
+          />
+          <Route
+            path="/study_sessions"
+            element={
+              <AppLayout>
+                <StudySessions />
+              </AppLayout>
+            }
+          />
+          <Route
+            path="/settings"
+            element={
+              <AppLayout>
+                <Settings />
+              </AppLayout>
+            }
+          />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
