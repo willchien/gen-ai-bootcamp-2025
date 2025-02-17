@@ -1,5 +1,3 @@
-# Language Learning Portal - Backend
-
 ## Install Dependencies
 
 ```sh
