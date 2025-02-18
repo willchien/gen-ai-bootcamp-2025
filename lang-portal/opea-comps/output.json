@@ -1,0 +1,1 @@
+{"id":"chatcmpl-5Zm6hM6SinuoUdiPEvPuhu","object":"chat.completion","created":1739847468,"model":"test-model","choices":[{"index":0,"message":{"role":"assistant","content":"No response content available"},"finish_reason":"stop","metadata":null}],"usage":{"prompt_tokens":0,"total_tokens":0,"completion_tokens":0}}

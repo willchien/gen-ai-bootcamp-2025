@@ -46,8 +46,8 @@ class ExampleService:
         # self.megaservice.flow_to(embedding, llm)
         self.megaservice.add(llm)
         # self.megaservice.flow_to(llm)
-    def start(self):
 
+    def start(self):
         self.service = MicroService(
             self.__class__.__name__,
             service_role=ServiceRoleType.MEGASERVICE,
@@ -57,15 +57,14 @@ class ExampleService:
             input_datatype=ChatCompletionRequest,
             output_datatype=ChatCompletionResponse,
         )
-
         self.service.add_route(self.endpoint, self.handle_request, methods=["POST"])
-
         self.service.start()
+
     async def handle_request(self, request: ChatCompletionRequest) -> ChatCompletionResponse:
         try:
             # Format the request for Ollama
             ollama_request = {
-                "model": request.model or "llama3.2:1b",  # or whatever default model you're using
+                "model": request.model or "llama3.2",  # or whatever default model you're using
                 "messages": [
                     {
                         "role": "user",
